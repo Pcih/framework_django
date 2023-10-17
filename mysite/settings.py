@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-i3k-5&lg1h-&otmamaiv95x!j40t$w&g$mkxn3%dcmts5ys*7&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "192.168.1.14",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "lesson_1",
 ]
 
 MIDDLEWARE = [
@@ -121,3 +125,40 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+'formatters': {
+    'verbose': {'format': '{levelname} {asctime} {module} {process} {thread}{message}',
+'style': '{',
+},
+'simple': {
+'format': '%(levelname)s %(message)s'
+},
+},
+'handlers': {
+'console': {
+'class': 'logging.StreamHandler',
+'formatter': 'verbose', # добавлен параметр formatter
+},
+'file': {
+'class': 'logging.FileHandler',
+'filename': './log/django.log',
+'formatter': 'verbose', # добавлен параметр formatter
+},
+},
+'loggers': {
+'django': {
+'handlers': ['console', 'file'],
+'level': 'INFO',
+},
+'myapp': {
+'handlers': ['console', 'file'],
+'level': 'DEBUG',
+'propagate': True,
+},
+},
+
+}
