@@ -46,3 +46,159 @@ WARNING 2023-10-17 17:31:18,296 basehttp 25377 139785279125056"GET /lesson_1/ HT
 INFO 2023-10-17 17:31:23,294 basehttp 25377 139785279125056"GET /lesson_1 HTTP/1.1" 200 609
 INFO 2023-10-17 17:31:25,475 basehttp 25377 139785279125056"GET /lesson_1 HTTP/1.1" 200 609
 INFO 2023-10-17 17:31:33,473 basehttp 25377 139785279125056"GET /lesson_1/about HTTP/1.1" 200 682
+INFO 2023-10-29 16:39:29,188 autoreload 28941 140171446407168Watching for file changes with StatReloader
+WARNING 2023-10-29 16:39:40,529 log 28941 140171022431808Not Found: /favicon.ico
+WARNING 2023-10-29 16:39:40,531 basehttp 28941 140171022431808"GET /favicon.ico HTTP/1.1" 404 2326
+WARNING 2023-10-29 16:39:49,544 log 28941 140171022431808Not Found: /lesson_2/
+WARNING 2023-10-29 16:39:49,545 basehttp 28941 140171022431808"GET /lesson_2/ HTTP/1.1" 404 2980
+WARNING 2023-10-29 16:40:02,764 log 28941 140171022431808Not Found: /lesson_2/index/
+WARNING 2023-10-29 16:40:02,765 basehttp 28941 140171022431808"GET /lesson_2/index/ HTTP/1.1" 404 2998
+WARNING 2023-10-29 16:40:12,702 log 28941 140171022431808Not Found: /lesson_2/index
+WARNING 2023-10-29 16:40:12,704 basehttp 28941 140171022431808"GET /lesson_2/index HTTP/1.1" 404 2995
+INFO 2023-10-29 16:42:19,169 autoreload 29530 140536768032768Watching for file changes with StatReloader
+INFO 2023-10-29 16:42:39,590 basehttp 29530 140536343631424"GET /lesson_1 HTTP/1.1" 200 609
+ERROR 2023-10-29 16:42:46,897 log 29530 140536343631424Internal Server Error: /lesson_2
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp2/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py", line 8, in index
+    return render(request, "lesson_2/index.html")
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp2/base.html
+ERROR 2023-10-29 16:42:46,912 basehttp 29530 140536343631424"GET /lesson_2 HTTP/1.1" 500 142872
+INFO 2023-10-29 16:44:06,265 basehttp 29530 140536343631424"GET /lesson_2 HTTP/1.1" 200 1092
+WARNING 2023-10-29 16:46:54,301 log 29530 140536343631424Not Found: /lesson_2/user/5
+WARNING 2023-10-29 16:46:54,303 basehttp 29530 140536343631424"GET /lesson_2/user/5 HTTP/1.1" 404 2998
+WARNING 2023-10-29 16:47:06,359 log 29530 140536343631424Not Found: /lesson_2/user/5/
+WARNING 2023-10-29 16:47:06,360 basehttp 29530 140536343631424"GET /lesson_2/user/5/ HTTP/1.1" 404 3001
+INFO 2023-10-29 16:47:24,856 autoreload 29530 140536768032768/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/urls.py changed, reloading.
+INFO 2023-10-29 16:47:26,826 autoreload 30369 139678831534080Watching for file changes with StatReloader
+WARNING 2023-10-29 16:47:27,978 log 30369 139678541354560Not Found: /lesson_2/user/5/
+WARNING 2023-10-29 16:47:27,980 basehttp 30369 139678541354560"GET /lesson_2/user/5/ HTTP/1.1" 404 3002
+WARNING 2023-10-29 16:47:29,378 log 30369 139678541354560Not Found: /lesson_2/user/5/
+WARNING 2023-10-29 16:47:29,381 basehttp 30369 139678541354560"GET /lesson_2/user/5/ HTTP/1.1" 404 3002
+WARNING 2023-10-29 16:47:45,428 log 30369 139678541354560Not Found: /lesson_2/user/5
+WARNING 2023-10-29 16:47:45,431 basehttp 30369 139678541354560"GET /lesson_2/user/5 HTTP/1.1" 404 2999
+INFO 2023-10-29 16:48:26,500 autoreload 30369 139678831534080/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 16:48:28,415 autoreload 30638 139865091485696Watching for file changes with StatReloader
+WARNING 2023-10-29 16:48:29,908 log 30638 139864659977792Not Found: /lesson_2/user/5
+WARNING 2023-10-29 16:48:29,910 basehttp 30638 139864659977792"GET /lesson_2/user/5 HTTP/1.1" 404 2999
+WARNING 2023-10-29 16:48:31,399 log 30638 139864659977792Not Found: /lesson_2/user/5
+WARNING 2023-10-29 16:48:31,404 basehttp 30638 139864659977792"GET /lesson_2/user/5 HTTP/1.1" 404 2999
+WARNING 2023-10-29 16:48:34,461 log 30638 139864659977792Not Found: /lesson_2/user/5/
+WARNING 2023-10-29 16:48:34,462 basehttp 30638 139864659977792"GET /lesson_2/user/5/ HTTP/1.1" 404 3002
+INFO 2023-10-29 16:48:57,175 autoreload 30638 139865091485696/home/pcih/Рабочий стол/git_gb/framework_django/mysite/urls.py changed, reloading.
+INFO 2023-10-29 16:48:59,176 autoreload 30845 140325573206016Watching for file changes with StatReloader
+INFO 2023-10-29 16:49:04,171 basehttp 30845 140325148890688"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 16:54:49,984 autoreload 31701 139913973485568Watching for file changes with StatReloader
+INFO 2023-10-29 16:54:56,271 basehttp 31701 139913819727424"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 16:56:15,405 autoreload 31701 139913973485568/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 16:56:17,301 autoreload 31954 139935097950208Watching for file changes with StatReloader
+INFO 2023-10-29 16:56:22,329 basehttp 31954 139935010461248"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 16:57:54,423 autoreload 32335 140434057875456Watching for file changes with StatReloader
+INFO 2023-10-29 16:58:03,452 autoreload 32335 140434057875456/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 16:58:03,586 basehttp 32335 140433901950528"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 16:58:05,392 autoreload 32410 139839958290432Watching for file changes with StatReloader
+INFO 2023-10-29 16:58:09,639 basehttp 32410 139839667639872"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 16:59:36,930 autoreload 32410 139839958290432/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 16:59:39,012 autoreload 32660 140643646513152Watching for file changes with StatReloader
+INFO 2023-10-29 16:59:40,916 basehttp 32660 140643490272832"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 17:00:05,866 autoreload 32660 140643646513152/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:00:07,747 autoreload 32782 139708707287040Watching for file changes with StatReloader
+INFO 2023-10-29 17:00:11,045 basehttp 32782 139708417377856"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 17:01:48,541 autoreload 32782 139708707287040/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:01:50,660 autoreload 33048 140412543299584Watching for file changes with StatReloader
+INFO 2023-10-29 17:01:54,134 basehttp 33048 140412254094912"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 17:01:58,845 basehttp 33048 140412254094912"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 17:14:41,098 autoreload 33048 140412543299584/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:14:42,966 autoreload 34308 140101854261248Watching for file changes with StatReloader
+INFO 2023-10-29 17:14:47,771 basehttp 34308 140101430539840"GET /lesson_2/user/5/ HTTP/1.1" 200 182
+INFO 2023-10-29 17:15:04,426 basehttp 34308 140101430539840"GET /lesson_2/user/2/ HTTP/1.1" 200 956
+INFO 2023-10-29 17:16:03,595 autoreload 34308 140101854261248/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:16:05,435 autoreload 34590 139752663592960Watching for file changes with StatReloader
+INFO 2023-10-29 17:16:07,203 basehttp 34590 139752374732352"GET /lesson_2/user/2/ HTTP/1.1" 200 956
+WARNING 2023-10-29 17:16:55,053 log 34590 139752374732352Not Found: /lesson_2/user/2/7
+WARNING 2023-10-29 17:16:55,054 basehttp 34590 139752374732352"GET /lesson_2/user/2/7 HTTP/1.1" 404 3010
+WARNING 2023-10-29 17:17:00,175 log 34590 139752374732352Not Found: /lesson_2/user/2/7/
+WARNING 2023-10-29 17:17:00,177 basehttp 34590 139752374732352"GET /lesson_2/user/2/7/ HTTP/1.1" 404 3013
+INFO 2023-10-29 17:17:31,009 autoreload 34590 139752663592960/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:17:33,268 autoreload 34903 140580021170176Watching for file changes with StatReloader
+WARNING 2023-10-29 17:17:35,484 log 34903 140579866859072Not Found: /lesson_2/user/2/7/
+WARNING 2023-10-29 17:17:35,486 basehttp 34903 140579866859072"GET /lesson_2/user/2/7/ HTTP/1.1" 404 3013
+WARNING 2023-10-29 17:17:37,836 log 34903 140579866859072Not Found: /lesson_2/user/2/7/
+WARNING 2023-10-29 17:17:37,837 basehttp 34903 140579866859072"GET /lesson_2/user/2/7/ HTTP/1.1" 404 3013
+WARNING 2023-10-29 17:17:38,758 log 34903 140579866859072Not Found: /lesson_2/user/2/7/
+WARNING 2023-10-29 17:17:38,760 basehttp 34903 140579866859072"GET /lesson_2/user/2/7/ HTTP/1.1" 404 3013
+ERROR 2023-10-29 17:18:10,315 log 34903 140579866859072Internal Server Error: /lesson_2/user_sorted/2/7/
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py", line 36, in sorted_basket
+    return render(request, 'myapp2/user_all_product.html', {'user': user, 'product_set': product_set, 'days': days_ago})
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp2/user_all_product.html
+ERROR 2023-10-29 17:18:10,331 basehttp 34903 140579866859072"GET /lesson_2/user_sorted/2/7/ HTTP/1.1" 500 96507
+INFO 2023-10-29 17:19:53,586 autoreload 34903 140580021170176/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:19:55,605 autoreload 35288 139966230663168Watching for file changes with StatReloader
+ERROR 2023-10-29 17:19:57,831 log 35288 139965803525696Internal Server Error: /lesson_2/user_sorted/2/7/
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py", line 36, in sorted_basket
+    return render(request, 'myapp2/user_all_product.html', context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: myapp2/user_all_product.html
+ERROR 2023-10-29 17:19:57,834 basehttp 35288 139965803525696"GET /lesson_2/user_sorted/2/7/ HTTP/1.1" 500 97505
+INFO 2023-10-29 17:20:27,537 autoreload 35288 139966230663168/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py changed, reloading.
+INFO 2023-10-29 17:20:29,673 autoreload 35403 140133888622592Watching for file changes with StatReloader
+INFO 2023-10-29 17:20:31,433 basehttp 35403 140133760226880"GET /lesson_2/user_sorted/2/7/ HTTP/1.1" 200 835
+INFO 2023-10-29 17:20:45,947 basehttp 35403 140133760226880"GET /lesson_2/user_sorted/2/30 HTTP/1.1" 301 0
+INFO 2023-10-29 17:20:45,969 basehttp 35403 140133441467968"GET /lesson_2/user_sorted/2/30/ HTTP/1.1" 200 837
