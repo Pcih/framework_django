@@ -202,3 +202,105 @@ INFO 2023-10-29 17:20:29,673 autoreload 35403 140133888622592Watching for file c
 INFO 2023-10-29 17:20:31,433 basehttp 35403 140133760226880"GET /lesson_2/user_sorted/2/7/ HTTP/1.1" 200 835
 INFO 2023-10-29 17:20:45,947 basehttp 35403 140133760226880"GET /lesson_2/user_sorted/2/30 HTTP/1.1" 301 0
 INFO 2023-10-29 17:20:45,969 basehttp 35403 140133441467968"GET /lesson_2/user_sorted/2/30/ HTTP/1.1" 200 837
+INFO 2023-11-02 15:12:05,052 autoreload 40036 139969533149184Watching for file changes with StatReloader
+WARNING 2023-11-02 15:12:26,224 log 40036 139969377523264Not Found: /
+WARNING 2023-11-02 15:12:26,227 basehttp 40036 139969377523264"GET / HTTP/1.1" 404 2277
+WARNING 2023-11-02 15:12:26,366 log 40036 139969377523264Not Found: /favicon.ico
+WARNING 2023-11-02 15:12:26,368 basehttp 40036 139969377523264"GET /favicon.ico HTTP/1.1" 404 2328
+INFO 2023-11-02 15:12:39,526 basehttp 40036 139969377523264"GET /lesson_2 HTTP/1.1" 301 0
+INFO 2023-11-02 15:12:39,552 basehttp 40036 139969024751168"GET /lesson_2/ HTTP/1.1" 200 1092
+ERROR 2023-11-02 15:13:03,932 log 40036 139969024751168Internal Server Error: /lesson_2/product_update_id/
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp4/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py", line 88, in product_update_id_form
+    return render(request, 'lesson_2/product_update_id.html', {'form': form})
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp4/base.html
+ERROR 2023-11-02 15:13:03,936 basehttp 40036 139969024751168"GET /lesson_2/product_update_id/ HTTP/1.1" 500 142353
+WARNING 2023-11-02 15:13:17,186 log 40036 139969024751168Not Found: /lesson_2/product_update_id/5
+WARNING 2023-11-02 15:13:17,187 basehttp 40036 139969024751168"GET /lesson_2/product_update_id/5 HTTP/1.1" 404 3459
+ERROR 2023-11-02 15:14:01,875 log 40036 139969024751168Internal Server Error: /lesson_2/product_update/5
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: myapp4/base.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py", line 76, in product_update_form
+    return render(request, 'lesson_2/product_update.html', {'form': form})
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/backends/django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: myapp4/base.html
+ERROR 2023-11-02 15:14:01,878 basehttp 40036 139969024751168"GET /lesson_2/product_update/5 HTTP/1.1" 500 142997
+INFO 2023-11-02 15:14:46,937 basehttp 40036 139969024751168"GET /lesson_2/product_update/5 HTTP/1.1" 200 1274
+WARNING 2023-11-02 15:14:58,875 log 40036 139969024751168Not Found: /lesson_2/product_update/
+WARNING 2023-11-02 15:14:58,876 basehttp 40036 139969024751168"GET /lesson_2/product_update/ HTTP/1.1" 404 3447
+INFO 2023-11-02 15:15:40,215 basehttp 40036 139969024751168"GET /lesson_2/product_update_id/ HTTP/1.1" 200 886
+INFO 2023-11-02 15:15:44,800 basehttp 40036 139969024751168"POST /lesson_2/product_update_id/ HTTP/1.1" 302 0
+INFO 2023-11-02 15:15:44,820 basehttp 40036 139969024751168"GET /lesson_2/product_update/4 HTTP/1.1" 200 1274
+INFO 2023-11-02 15:16:19,097 basehttp 40036 139969024751168"POST /lesson_2/product_update/4 HTTP/1.1" 200 1324

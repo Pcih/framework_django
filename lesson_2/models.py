@@ -17,6 +17,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2)
     description = models.TextField()
     quantity = models.IntegerField()
+    # Добавил ещё раньше
     image = models.ImageField(upload_to='images')
     # product_image поле не обязательное !
 
