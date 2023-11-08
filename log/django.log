@@ -304,3 +304,27 @@ INFO 2023-11-02 15:15:40,215 basehttp 40036 139969024751168"GET /lesson_2/produc
 INFO 2023-11-02 15:15:44,800 basehttp 40036 139969024751168"POST /lesson_2/product_update_id/ HTTP/1.1" 302 0
 INFO 2023-11-02 15:15:44,820 basehttp 40036 139969024751168"GET /lesson_2/product_update/4 HTTP/1.1" 200 1274
 INFO 2023-11-02 15:16:19,097 basehttp 40036 139969024751168"POST /lesson_2/product_update/4 HTTP/1.1" 200 1324
+INFO 2023-11-08 18:56:38,046 autoreload 8639 140704891830272Watching for file changes with StatReloader
+INFO 2023-11-08 18:56:56,377 basehttp 8639 140704468694592"GET / HTTP/1.1" 200 1092
+INFO 2023-11-08 18:57:45,425 autoreload 9058 140027630399488Watching for file changes with StatReloader
+ERROR 2023-11-08 18:58:16,113 log 9058 140027206039104Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/lesson_2/views.py", line 92, in index
+    return render(request, "lesson_2/index.html")
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/pcih/Рабочий стол/git_gb/framework_django/env/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: lesson_2/index.html
+ERROR 2023-11-08 18:58:16,118 basehttp 9058 140027206039104"GET / HTTP/1.1" 500 90018
+INFO 2023-11-08 19:11:32,077 basehttp 9058 140027206039104"GET / HTTP/1.1" 200 375
+WARNING 2023-11-08 19:11:32,513 log 9058 140027206039104Not Found: /favicon.ico
+INFO 2023-11-08 19:12:00,010 basehttp 9058 140027206039104"GET / HTTP/1.1" 200 373
+INFO 2023-11-08 19:12:35,509 basehttp 9058 140027206039104"GET / HTTP/1.1" 200 373
+INFO 2023-11-08 19:12:36,806 basehttp 9058 140027206039104"GET / HTTP/1.1" 200 351
